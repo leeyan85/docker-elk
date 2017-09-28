@@ -38,11 +38,11 @@ node.data: true
 #
 # Path to directory where to store the data (separate multiple locations by comma):
 #
-path.data: /opt/elasticsearch/data
+path.data: /usr/share/elasticsearch/data
 #
 # Path to log files:
 #
-path.logs: /opt/elasticsearch/log
+path.logs: /usr/share/elasticsearch/log
 #
 # ----------------------------------- Memory -----------------------------------
 #
@@ -60,7 +60,7 @@ path.logs: /opt/elasticsearch/log
 #
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
-network.host: [_eth0_, _local_]
+network.host: 0.0.0.0
 #
 # Set a custom port for HTTP:
 #
