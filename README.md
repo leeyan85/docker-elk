@@ -2,7 +2,7 @@
 ![Infrastructure](https://github.com/leeyan85/docker-elk/blob/master/ELK%20Architecture.png)
 
 ## Environment
-
+### server functions
 Host  | IP | application | note
 ---|---|---|---|
 logs1  | 10.58.90.66 | logstash |
@@ -11,7 +11,11 @@ es0    | 10.58.90.77|elasticsearch| 	Coordinating-only Elasticsearch
 es1    | 10.58.90.68|elasticsearch | master node
 es2    | 10.58.90.69|elasticsearch | data node
 kibana1| 10.58.90.55| kibana| kibana
-
+### ansible init /etc/hosts
+```
+    cd ansible/
+    ansible-play -i hosts group.yml
+```    
 ## Kafka
 ### kafka config
 **/opt/kafka/config/server.properties**

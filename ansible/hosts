@@ -1,0 +1,16 @@
+[elasticsearch]
+10.58.90.77      hostname='es0'
+10.58.90.68      hostname='es1' 
+10.58.90.69      hostname='es2'
+
+[kibana]
+10.58.90.55      hostname='kibana1'
+
+[logstash]
+10.58.90.66      hostname='logs1'
+
+[kafka]
+10.58.90.56      hostname='kafka1'
+
+[filebeat]
+10.58.90.55      hostname='kibana1'

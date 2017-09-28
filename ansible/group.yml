@@ -1,0 +1,11 @@
+---
+- hosts: all 
+  tasks:
+    - name: update hosts file
+      lineinfile:
+        dest: /etc/hosts
+        regexp: "{{ item }}"
+        line: "{{item}} {{hostvars[item]['hostname']}}"
+      with_items: 
+        "{{groups['all']}}"
+      sudo: yes
