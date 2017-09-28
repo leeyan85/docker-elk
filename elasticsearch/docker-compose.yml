@@ -5,7 +5,7 @@ services:
   elasticsearch:
     build: ./
     volumes:
-      - ./config/elasticsearch.yml:/etc/elasticsearch/elasticsearch.yml
+      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
       - /etc/hosts:/etc/hosts
       - /etc/resolv.conf:/etc/resolv.conf
     ports:

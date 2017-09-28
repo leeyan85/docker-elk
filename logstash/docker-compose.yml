@@ -2,10 +2,10 @@ version: '2'
 
 services:
   logstash:
-    build: .
+    build: ./
     volumes:
-      - ./config/logstash.yml:/etc/logstash/logstash.yml
-      - ./conf.d/:/etc/logstash/conf.d/
+      - ./config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./pipeline/:/usr/share/logstash/pipeline
       - /etc/hosts:/etc/hosts
       - /etc/resolv.conf:/etc/resolv.conf
     ports:
