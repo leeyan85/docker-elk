@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  kibana:
+    build: ./
+    volumes:
+      - ./config/kibana.yml:/etc/kibana/kibana.yml
+      - /etc/hosts:/etc/hosts
+      - /etc/resolv.conf:/etc/resolv.conf
+    ports:
+      - "5611:5601"
+    networks:
+      - elk
+networks:
+  elk:
+    driver: bridge
