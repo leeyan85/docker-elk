@@ -2,7 +2,7 @@ version: '2'
 
 services:
   kibana:
-    build: ./
+    build: .
     volumes:
       - ./config/kibana.yml:/etc/kibana/kibana.yml
       - /etc/hosts:/etc/hosts

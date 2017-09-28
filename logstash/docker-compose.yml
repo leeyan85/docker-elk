@@ -4,8 +4,10 @@ services:
   logstash:
     build: .
     volumes:
-      - ./config/:/etc/logstash/conf.d/
+      - ./config/logstash.yml:/etc/logstash/logstash.yml
       - ./conf.d/:/etc/logstash/conf.d/
+      - /etc/hosts:/etc/hosts
+      - /etc/resolv.conf:/etc/resolv.conf
     ports:
       - "5000:5000"
     environment:

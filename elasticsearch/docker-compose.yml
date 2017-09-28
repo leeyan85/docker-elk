@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+
+  elasticsearch:
+    build: ./
+    volumes:
+      - ./config/elasticsearch.yml:/etc/elasticsearch/elasticsearch.yml
+      - /etc/hosts:/etc/hosts
+      - /etc/resolv.conf:/etc/resolv.conf
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+
+networks:
+
+  elk:
+    driver: bridge
