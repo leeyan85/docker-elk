@@ -205,7 +205,7 @@ filter {
 output {
   if [type]=="apache_access" {
      elasticsearch {
-        hosts => "10.58.90.68:9200"
+        hosts => ["es1:9200", "es2:9200", "es3:9200"]
         manage_template => false
         index => "apache_access-%{+YYYY.MM.dd}"
         document_type => "%{[@metadata][type]}"
@@ -214,7 +214,7 @@ output {
 
   else if [type]=="gerrit_access"{
         elasticsearch {
-        hosts => "10.58.90.68:9200"
+        hosts => ["es1:9200", "es2:9200", "es3:9200"]
         manage_template => false
         index => "gerrit_access-%{+YYYY.MM.dd}"
         document_type => "%{[@metadata][type]}"
@@ -222,7 +222,7 @@ output {
   }
   else if [type]=="opengrok_access"{
       elasticsearch {
-      hosts => "10.58.90.68:9200"
+      hosts => ["es1:9200", "es2:9200", "es3:9200"]
       index => "opengrok_access-%{+YYYY.MM.dd}"
       manage_template => false
       document_type => "%{[@metadata][type]}"
