@@ -162,6 +162,8 @@ how to install elasticsearch-head
 ## logstash
 Put Logstash plugin configurations in /etc/logstash/conf.d/
 
+[grok debug URL](http://grokdebug.herokuapp.com/)
+
 **/etc/logstash/conf.d/apache_access.conf**
 
 

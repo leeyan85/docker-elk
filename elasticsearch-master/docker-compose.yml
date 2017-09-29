@@ -1,0 +1,9 @@
+elasticsearch:
+   build: ./
+   volumes:
+     - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+     - /etc/hosts:/etc/hosts
+     - /etc/resolv.conf:/etc/resolv.conf
+   environment:
+     ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+   net: host
